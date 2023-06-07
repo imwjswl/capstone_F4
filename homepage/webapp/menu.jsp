@@ -1,59 +1,79 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+      /* 상단 고정 메뉴 스타일 */
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: purple;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: flex-start;
+      }
+           /* 메뉴 항목 스타일 */
+      .menu a {
+        color: white;
+        font-weight: bold;
+        margin-right: 20px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 10px;
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+  </head>
+  
+  <body>
+    <div class="menu">
+      <a href="menu.jsp">Home</a>
+      <h2>캡스톤디자인 출결관리 시스템</h2>
+    </div>
+   
+  </body>
+</html>
+
+
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>메인 홈페이지</title>
+    <title>출결 관리 웹사이트</title>
     <style>
-        /* CSS styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
+        /* 헤더 스타일 */
+        header {
+            background-color: #333;
+            color: #fff;
             padding: 20px;
-        }
-
-        h1 {
-            color: #333;
             text-align: center;
         }
 
-        button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            background-color: #4CAF50;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
+        /* 푸터 스타일 */
+        footer {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
- 
+    <header>
+        <h1>캡스톤 디자인 출석체크 사이트</h1>
+    </header>
 
-        <%@ include file="menu.jsp"%>
-        <%@ include file="index.jsp"%>
 
-        <div class="button-container">
-            <button onclick="location.href='reset.jsp'">새로고침</button>
-            <button onclick="location.href='modify.html'">수정하기</button>
-            <button onclick="location.href='search.jsp'">학생조회</button>
-            <button onclick="location.href='search.jsp'">학생추가</button>
-        </div>
-    </div>
+
+    <footer>
+	    <p>&copy; 조선대학교 컴퓨터공학과 캡스톤디자인 F4</p>
+		<p> 김채린 백선영 전지원 한민기 </p>
+    </footer>
 </body>
 </html>
